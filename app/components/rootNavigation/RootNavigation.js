@@ -5,13 +5,15 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import Constant from '../../controller/Constant'
 import HomeScreen from '../../controller/HomeScreen'
+import LoginScreen from './../authentication/login/LoginScreen'
 
 const Stack = createNativeStackNavigator()
 
 const RootNavigation = () => {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName={Constant.nameScreen.Home}>
+            <Stack.Navigator initialRouteName={Constant.nameScreen.Login}>
+                <Stack.Screen name={Constant.nameScreen.Login} component={LoginScreen} />
                 <Stack.Screen name={Constant.nameScreen.Home} component={HomeScreen} />
             </Stack.Navigator>
         </NavigationContainer>

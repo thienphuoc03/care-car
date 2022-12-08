@@ -27,6 +27,7 @@ export default {
         notoSansJPLight: 'NotoSansJP-Light'
     },
     nameScreen: {
+        Login: '../components/authentication/login/LoginScreen.js',
         Home: '../components/home/HomeScreen.js'
     }
 }

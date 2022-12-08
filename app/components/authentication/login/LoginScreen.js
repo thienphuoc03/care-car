@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput } from 'react-native'
 import { RadioButton } from 'react-native-paper'
-import LinearGradient from 'react-native-linear-gradient'
 
 import Constant from '../../../controller/Constant'
 
@@ -10,89 +9,78 @@ const LoginScreen = () => {
 
     return (
         <View style={styles.container}>
-            <LinearGradient
-                colors={['#4c669f', '#3b5998', '#192f6a']}
-                style={styles.linearGradient}
-            >
-                <TouchableOpacity style={styles.backButton}>
-                    <Image styles={styles.backIcon} source={Constant.images.back} />
-                </TouchableOpacity>
+            <TouchableOpacity style={styles.backButton}>
+                <Image styles={styles.backIcon} source={Constant.images.back} />
+            </TouchableOpacity>
 
-                <View style={styles.loginContainer}>
-                    <View style={styles.logoContainer}>
-                        <Image style={styles.logo} source={Constant.images.logo} />
-                        <Text style={styles.logoTitle}>CARECAR</Text>
-                    </View>
-
-                    <View style={styles.radioButtonContainer}>
-                        <RadioButton
-                            style={styles.radioButton}
-                            value='Cá nhân'
-                            status={checked === 'Cá nhân' ? 'checked' : 'unchecked'}
-                            onPress={() => setChecked('Cá nhân')}
-                        />
-                        <Text style={styles.radioButtonTitle}>Cá nhân</Text>
-
-                        <RadioButton
-                            style={styles.radioButton}
-                            value='Garage'
-                            status={checked === 'Garage' ? 'checked' : 'unchecked'}
-                            onPress={() => setChecked('Garage')}
-                        />
-                        <Text style={styles.radioButtonTitle}>Garage</Text>
-                    </View>
-
-                    <View style={styles.inputContainer}>
-                        <TextInput
-                            style={styles.input}
-                            placeholder='Số điện thoại'
-                            placeholderTextColor='rgba(0,0,0,0.2)'
-                            keyboardType='numeric'
-                            autoCorrect={false}
-                        />
-                        <TextInput
-                            style={styles.input}
-                            placeholder='Mật khẩu'
-                            placeholderTextColor='rgba(0,0,0,0.2)'
-                            autoCorrect={false}
-                            secureTextEntry
-                        />
-                    </View>
-
-                    <TouchableOpacity style={styles.loginButton}>
-                        <Text style={styles.loginButtonText}>Đăng nhập</Text>
-                    </TouchableOpacity>
-
-                    <View style={styles.socialNetwork}>
-                        <TouchableOpacity style={styles.socialNetworkBorder}>
-                            <Image
-                                style={styles.socialNetworkIcon}
-                                source={Constant.images.facebook}
-                            />
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.socialNetworkBorder}>
-                            <Image style={styles.socialNetworkIcon} source={Constant.images.zalo} />
-                        </TouchableOpacity>
-                        <TouchableOpacity style={styles.socialNetworkBorder}>
-                            <Image
-                                style={styles.socialNetworkIcon}
-                                source={Constant.images.apple}
-                            />
-                        </TouchableOpacity>
-                    </View>
+            <View style={styles.loginContainer}>
+                <View style={styles.logoContainer}>
+                    <Image style={styles.logo} source={Constant.images.logo} />
+                    <Text style={styles.logoTitle}>CARECAR</Text>
                 </View>
 
-                <TouchableOpacity>
-                    <Text style={styles.forgotPassword}>Quên mật khẩu?</Text>
+                <View style={styles.radioButtonContainer}>
+                    <RadioButton
+                        style={styles.radioButton}
+                        value='Cá nhân'
+                        status={checked === 'Cá nhân' ? 'checked' : 'unchecked'}
+                        onPress={() => setChecked('Cá nhân')}
+                    />
+                    <Text style={styles.radioButtonTitle}>Cá nhân</Text>
+
+                    <RadioButton
+                        style={styles.radioButton}
+                        value='Garage'
+                        status={checked === 'Garage' ? 'checked' : 'unchecked'}
+                        onPress={() => setChecked('Garage')}
+                    />
+                    <Text style={styles.radioButtonTitle}>Garage</Text>
+                </View>
+
+                <View style={styles.inputContainer}>
+                    <TextInput
+                        style={styles.input}
+                        placeholder='Số điện thoại'
+                        placeholderTextColor='rgba(0,0,0,0.2)'
+                        keyboardType='numeric'
+                        autoCorrect={false}
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder='Mật khẩu'
+                        placeholderTextColor='rgba(0,0,0,0.2)'
+                        autoCorrect={false}
+                        secureTextEntry
+                    />
+                </View>
+
+                <TouchableOpacity style={styles.loginButton}>
+                    <Text style={styles.loginButtonText}>Đăng nhập</Text>
                 </TouchableOpacity>
 
-                <View style={styles.registerContainer}>
-                    <Text style={styles.registerTitle}>Bạn chưa có tài khoản?</Text>
-                    <TouchableOpacity style={styles.registerButton}>
-                        <Text style={styles.registerText}>Đăng ký</Text>
+                <View style={styles.socialNetwork}>
+                    <TouchableOpacity style={styles.socialNetworkBorder}>
+                        <Image style={styles.socialNetworkIcon} source={Constant.images.facebook} />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.socialNetworkBorder}>
+                        <Image style={styles.socialNetworkIcon} source={Constant.images.zalo} />
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.socialNetworkBorder}>
+                        <Image style={styles.socialNetworkIcon} source={Constant.images.apple} />
                     </TouchableOpacity>
                 </View>
-            </LinearGradient>
+            </View>
+
+            <TouchableOpacity>
+                <Text style={styles.forgotPassword}>Quên mật khẩu?</Text>
+            </TouchableOpacity>
+
+            <View style={styles.registerContainer}>
+                <Text style={styles.registerTitle}>Bạn chưa có tài khoản?</Text>
+                <TouchableOpacity style={styles.registerButton}>
+                    <Text style={styles.registerText}>Đăng ký</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     )
 }
@@ -103,12 +91,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#f79925'
-    },
-    linearGradient: {
-        flex: 1,
-        paddingLeft: 15,
-        paddingRight: 15,
-        borderRadius: 5
     },
     backButton: {
         position: 'absolute',
