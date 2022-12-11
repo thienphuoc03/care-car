@@ -1,10 +1,10 @@
 import { Dimensions } from 'react-native'
 
 export default {
-    color: {
+    colors: {
         primary: '#BD403A',
         secondary: '#0079BF',
-        while: '#ffffff',
+        white: '#ffffff',
         black: '#000000',
         gray: '#bbbbbb'
     },
@@ -26,8 +26,10 @@ export default {
         notoSansJPThin: 'NotoSansJP-Thin',
         notoSansJPLight: 'NotoSansJP-Light'
     },
-    nameScreen: {
-        Login: '../components/authentication/login/LoginScreen.js',
-        Home: '../components/home/HomeScreen.js'
+    nameScreens: {
+        Login: 'LoginScreen',
+        Home: 'HomeScreen',
+        Contact: 'ContactScreen',
+        DetailContact: 'DetailContactScreen'
     }
 }

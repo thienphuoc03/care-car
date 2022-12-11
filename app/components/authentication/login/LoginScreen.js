@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     },
     loginContainer: {
         alignItems: 'center',
-        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+        backgroundColor: Constant.colors.white,
         borderRadius: 15,
         flexDirection: 'column',
         paddingVertical: 20,
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
     },
     logoTitle: {
         fontSize: 16,
-        color: Constant.color.primary,
+        color: Constant.colors.primary,
         fontWeight: 'bold'
     },
     radioButtonContainer: {
@@ -128,20 +128,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginHorizontal: 20
     },
-    radioButton: {
-        // height: 20
-        // width: 20,
-        // backgroundColor: Constant.color.while,
-        // borderRadius: 10,
-        // borderWidth: 1,
-        // borderColor: Constant.color.black,
-        // alignItems: 'center'
-        // justifyContent: 'center'
-    },
     radioButtonTitle: {
         fontSize: 16,
         marginLeft: 5,
-        color: Constant.color.black
+        color: Constant.colors.black
     },
     inputContainer: {
         flexDirection: 'column',
@@ -150,17 +140,17 @@ const styles = StyleSheet.create({
     },
     inputTitle: {
         fontSize: 16,
-        color: Constant.color.gray,
+        color: Constant.colors.gray,
         fontWeight: 'bold'
     },
     input: {
         width: 280,
         height: 40,
         fontSize: 16,
-        color: Constant.color.black,
+        color: Constant.colors.black,
         borderRadius: 8,
         paddingHorizontal: 10,
-        backgroundColor: Constant.color.while,
+        backgroundColor: Constant.colors.white,
         borderWidth: 1,
         borderColor: 'rgba(0, 0, 0, 0.2)',
         marginTop: 15
@@ -175,7 +165,7 @@ const styles = StyleSheet.create({
     },
     loginButtonText: {
         fontSize: 16,
-        color: Constant.color.while,
+        color: Constant.colors.white,
         fontWeight: 'bold'
     },
     socialNetwork: {
@@ -211,7 +201,7 @@ const styles = StyleSheet.create({
     },
     registerTitle: {
         fontSize: 16,
-        color: Constant.color.black
+        color: Constant.colors.black
     },
     registerButton: {
         marginLeft: 10,
@@ -224,7 +214,7 @@ const styles = StyleSheet.create({
     },
     registerText: {
         fontSize: 16,
-        color: Constant.color.while,
+        color: Constant.colors.white,
         fontWeight: 'bold',
         paddingHorizontal: 13,
         paddingVertical: 7
