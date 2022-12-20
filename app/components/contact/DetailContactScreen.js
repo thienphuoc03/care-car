@@ -11,7 +11,8 @@ const DetailContactScreen = () => {
     const [visible, setVisible] = useState(false)
     const [avatar, setAvatar] = useState(contact?.avatar)
     const [name, setName] = useState(contact?.name)
-    const [phoneNumber, setPhoneNumber] = useState(contact?.phoneNumber)
+    const [email, setEmail] = useState(contact?.email)
+
     const showDialog = () => {
         setVisible(true)
     }
@@ -31,11 +32,11 @@ const DetailContactScreen = () => {
                 </TouchableOpacity>
                 <View style={styles.contentView}>
                     <Text style={styles.nameView}>{name}</Text>
-                    <Text styles={styles.phoneNumber}>{phoneNumber}</Text>
+                    <Text styles={styles.email}>{email}</Text>
                 </View>
                 <View style={styles.buttonView}>
                     <TouchableOpacity style={styles.callIcon}>
-                        <Icon name='phone' size={25} color='blue'></Icon>
+                        <Icon name='envelope' size={25} color='blue'></Icon>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.callIcon} onPress={showDialog}>
                         <Icon name='edit' size={25} color='orange'></Icon>
@@ -60,10 +61,10 @@ const DetailContactScreen = () => {
                     autoCapitalize={'none'}
                 ></Dialog.Input>
                 <Dialog.Input
-                    label='Số điện thoại'
+                    label='Email'
                     style={styles.dialogInput}
-                    onChangeText={(value) => setPhoneNumber(value)}
-                    value={phoneNumber}
+                    onChangeText={(value) => setEmail(value)}
+                    value={email}
                     autoCapitalize={'none'}
                 ></Dialog.Input>
                 <Dialog.Button label='Trở về' onPress={handleCancel} />
@@ -116,7 +117,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         fontWeight: 'bold'
     },
-    phoneNumber: {
+    email: {
         fontSize: 16
     },
     buttonView: {

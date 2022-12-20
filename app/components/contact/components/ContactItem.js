@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native'
 import Constant from '../../../controller/Constant'
 import Icon from 'react-native-vector-icons/dist/FontAwesome'
 
-const ContactItem = ({ screeen, contact }) => {
+const ContactItem = ({ screen, contact }) => {
     const navigation = useNavigation()
 
     const showDetailContact = () => {
@@ -17,11 +17,13 @@ const ContactItem = ({ screeen, contact }) => {
         <TouchableOpacity style={styles.rootView} onPress={showDetailContact}>
             <Image style={styles.avatarImg} source={{ uri: contact?.avatar }} />
             <View style={styles.contentView}>
-                <Text style={styles.nameView}>{contact?.name}</Text>
-                <Text styles={styles.phoneNumber}>{contact?.phoneNumber}</Text>
+                <Text
+                    style={styles.nameView}
+                >{`${contact?.first_name} ${contact?.last_name}`}</Text>
+                <Text styles={styles.emailView}>{contact?.email}</Text>
             </View>
             <View style={styles.buttonCall}>
-                <Icon name='phone' size={25} color='blue'></Icon>
+                <Icon name='envelope' size={25} color='blue'></Icon>
             </View>
         </TouchableOpacity>
     )
@@ -52,7 +54,7 @@ const styles = StyleSheet.create({
         color: Constant.colors.black,
         fontWeight: 'bold'
     },
-    phoneNumber: {
+    emailView: {
         flex: 1,
         fontSize: 16,
         marginLeft: 4
